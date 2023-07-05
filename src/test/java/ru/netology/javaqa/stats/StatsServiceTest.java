@@ -7,9 +7,19 @@ public class StatsServiceTest {
  @Test
     public void sumSale() {
      StatsService service= new StatsService();
-     int [] sales = {65, 45,7,1,3,45,83,67,86,23,98,53,75};
-     int expectedSum = 651;
+     int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+     int expectedSum = 180;
      int actualSum = service.salesVolume(sales);
      Assertions.assertEquals(expectedSum, actualSum);
+
  }
+@Test
+ public void AmountOfSalesPerMonth(){
+ StatsService service= new StatsService();
+ int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+ int expectedSum1 =15;
+ int actualSum1 = service.averageAmountOfSalesPerMonth(sales);
+ Assertions.assertEquals(expectedSum1, actualSum1);
+}
+
 }
