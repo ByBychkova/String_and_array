@@ -9,6 +9,18 @@ public class Main {
         int sum = service.salesVolume(sale);
         System.out.println("Cумма всех продаж " + (sum));
 
-        System.out.println("Средняя сумма продаж в месяц "+ (sum / sale.length));
-        }
+        System.out.println("Средняя сумма продаж в месяц " + (sum / sale.length));
+
+        int maxMonth = service.getMaxMonthSales(sale);
+        System.out.println("Месяц, в котором был пик продаж " + (maxMonth));
+
+        int minMonth = service.minSales(sale);
+        System.out.println("Месяц, в котором был минимум продаж " + (minMonth));
+
+        int month1 = service.monthOfSalesBelowAverage(sale);
+        System.out.println("Месяцев в которых продажи были ниже среднего " + (month1));
+
+        int month2 = service.salesAboveAverage(sale);
+        System.out.println("Месяцев в которых продажи были выше среднего" + (month2));
     }
+}
